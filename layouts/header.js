@@ -3,7 +3,7 @@ import modesContext from "../context/modescontext";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "../src/assets/1";
-import LogoWhite from "../src/assets/2";
+import LogoWhite from "../src/assets/3";
 
 const Header = (props) => {
   const font = useRef();
@@ -77,7 +77,7 @@ const Header = (props) => {
           <a>
             <div
               style={{
-                width: "80px",
+                width: "60px",
               }}
             >
               {router.pathname === "/" && navStyle === "transparent" ? (
@@ -110,7 +110,7 @@ const Header = (props) => {
               </a>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link href="/about">
               <a
                 style={mode == "dark" ? { color: "black" } : { color: "white" }}
@@ -119,10 +119,10 @@ const Header = (props) => {
                 {lang.lang === "EN" ? "about" : "من نحن"}
               </a>
             </Link>
-          </li>
+          </li> */}
           <li
             className="nav-item"
-            style={lang.lang === "AR" ? { marginLeft: "10px" } : {}}
+            style={lang.lang === "AR" ? { marginLeft: "22px" } : {}}
           >
             <div className="nav-link dropdown">
               <span

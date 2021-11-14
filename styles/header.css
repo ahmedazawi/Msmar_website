@@ -48,9 +48,7 @@
 }
 
 .nav-link:hover {
-  color: #ac6aac !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  color: var(--lightPurp) !important;
 }
 
 .dropbtn {
@@ -73,7 +71,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 1;
-  margin: 25px -85px;
+  margin: 28px -80px;
 }
 
 /* Links inside the dropdown */
@@ -86,10 +84,8 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content > div:hover {
-  color: #ac6aac;
+  color: var(--lightPurp);
   border-radius: 10px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -97,7 +93,7 @@
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 3.6rem;
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;

@@ -1,116 +1,154 @@
-.container {
-  padding: 0 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Vibes&display=swap");
+
+.main_img {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--middlePurp);
+  color: white;
+  font-family: bitsumishi, "Vibes", cursive;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.main_text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0 3rem;
 }
 
-.footer {
+.main_text h1 {
+  font-size: 3em;
+  font-weight: 800;
+  color: var(--middlePurp);
+}
+.main_text p {
+  font-size: 1.3em;
+  color: var(--fontColor);
+  line-height: 1.5em;
+}
+.about_us_container {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about_us_container > div {
+  padding: 0 1rem;
+}
+.about_us_container > img {
+  max-width: 50vw;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.cards_container {
+  width: 100%;
+}
+/* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+.grid::-webkit-scrollbar {
+  width: 10px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.grid::-webkit-scrollbar-track {
+  background: #ffffff;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.grid::-webkit-scrollbar-thumb {
+  background-color: var(--middlePurp);
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+  flex-direction: row;
+  overflow-x: scroll;
+  grid-gap: 12px;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  min-width: 100%;
+  /* Firefox */
+  scrollbar-width: none;
+  scrollbar-color: var(--middlePurp) #ffffff;
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.cards {
+  min-width: 40vw;
+  width: 60vw;
+  height: 60vh;
+  background-color: var(--middlePurp);
+  color: white;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.cards:hover .cards_img {
+  transform: scale(1.05);
+  /* transition: transform 0.3s ease-in-out; */
+  overflow: hidden;
 }
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.cards_img {
+  max-height: 60%;
+  transition: transform 0.3s ease-in-out;
 }
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.cards_img > img {
+  width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.cards_text {
+  width: 100%;
+  max-height: 40%;
+  padding: 1rem;
+}
+@media only screen and (max-width: 1104px) {
+  .about_us_container {
+    flex-wrap: wrap;
+  }
+  .about_us_container > img {
+    max-width: 80vw;
+  }
+  .about_us_container > div {
+    padding: 0;
+  }
+  .cards {
+    max-height: 40vh;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .cards {
+    height: 35vh;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .cards {
+    min-width: 60vw;
+    width: 80vw;
+    height: 30vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .main_img {
+    min-height: 95vh;
+  }
+  .main_text {
+    margin: 0 2rem;
+  }
+  .cards {
+    min-width: 80vw;
+    width: 100vw;
+    height: 50vh;
   }
 }

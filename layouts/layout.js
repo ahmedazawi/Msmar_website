@@ -48,8 +48,13 @@ const Layout = ({ children }) => {
             rel="stylesheet"
           />
 
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {/* google map api */}
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+            rel="stylesheet"
+          />
         </Head>
         <Header changeLang={changeLang} />
 
