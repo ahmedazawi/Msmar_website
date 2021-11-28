@@ -15,7 +15,6 @@ const Header = (props) => {
   // header update
   useEffect(() => {
     let navs = document.querySelector(".header");
-    document.addEventListener("click", clickOutListener);
     if (window.location.pathname === "/") {
       setNavStyle("transparent");
       setMode("light");
@@ -38,28 +37,11 @@ const Header = (props) => {
     }
   };
 
-  const clickOutListener = (e) => {
-    let dropContent = document.querySelector(".dropdown-content");
-    var drop = document.querySelector(".dropdown");
-    if (!drop.contains(e.target)) {
-      dropContent.style.display = "none";
-    }
-  };
-
   const mobileMenu = () => {
     document.querySelector(".hamburger").classList.toggle("active");
     document.querySelector(".nav-menu").classList.toggle("active");
   };
 
-  const dropDownList = () => {
-    let dropContent = document.querySelector(".dropdown-content");
-
-    if (dropContent.style.display === "block") {
-      dropContent.style.display = "none";
-    } else {
-      dropContent.style.display = "block";
-    }
-  };
   return (
     <header
       className="header"
@@ -110,44 +92,37 @@ const Header = (props) => {
               </a>
             </Link>
           </li>
-          {/* <li className="nav-item">
-            <Link href="/about">
-              <a
-                style={mode == "dark" ? { color: "black" } : { color: "white" }}
-                className="nav-link"
-              >
-                {lang.lang === "EN" ? "about" : "من نحن"}
-              </a>
-            </Link>
-          </li> */}
+
           <li
             className="nav-item"
-            style={lang.lang === "AR" ? { marginLeft: "22px" } : {}}
+            style={lang.lang === "AR" ? { marginLeft: "0" } : {}}
           >
-            <div className="nav-link dropdown">
-              <span
-                className="dropbtn"
-                style={mode == "dark" ? { color: "black" } : { color: "white" }}
-                onClick={dropDownList}
-              >
-                {lang.lang === "EN" ? "Options" : "خيارات"}
-              </span>
-              <div className="dropdown-content">
-                <div className="language">
-                  <div>{lang.lang === "EN" ? "Language" : "أللغة"}</div>
-                  <div>
-                    <label
-                      className="switch"
-                      onClick={() => props.changeLang()}
-                    >
-                      <input type="checkbox" />
-                      <span className="slider round"></span>
-                    </label>
-                  </div>
-                </div>
-                <div>Link 2</div>
-                <div>Link 3</div>
-              </div>
+            <div className="nav-link lan-switch">
+              <input
+                id="language-toggle"
+                className="check-toggle check-toggle-round-flat"
+                type="checkbox"
+                onClick={() => props.changeLang()}
+                style={
+                  navStyle === "white"
+                    ? {
+                        backgroundColor: "black",
+                      }
+                    : { backgroundColor: "white" }
+                }
+              />
+              <label
+                htmlFor="language-toggle"
+                style={
+                  navStyle === "white"
+                    ? {
+                        backgroundColor: "rgb(108, 75, 157)",
+                      }
+                    : { backgroundColor: "white" }
+                }
+              ></label>
+              <span className="on">{lang.lang === "EN" ? "EN" : "AR"}</span>
+              <span className="off">{lang.lang === "EN" ? "AR" : "EN"}</span>
             </div>
           </li>
         </ul>

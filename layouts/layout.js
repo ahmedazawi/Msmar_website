@@ -27,11 +27,15 @@ const Layout = ({ children }) => {
   });
   const changeLang = () => {
     if (lang === "AR") {
-      setLang("EN");
-      // window.location.reload();
+      return setTimeout(() => {
+        setLang("EN");
+        window.location.replace("/");
+      }, 150);
     } else {
-      setLang("AR");
-      // window.location.reload();
+      return setTimeout(() => {
+        setLang("AR");
+        window.location.replace("/");
+      }, 150);
     }
   };
   return (

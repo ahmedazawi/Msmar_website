@@ -2,25 +2,37 @@
   {
     "id": 1,
     "title": "UrTask",
-    "description": "",
-    "img": ""
+    "description_AR": "تم إنشاء هذا التطبيق لتوفير بيئة مناسبة لمنح مديري المشاريع القدرة على إدارة ومراقبة وتتبع الوقت للأهداف قصيرة الأجل أو طويلة الأجل التي يمكن أن تسبب تأثيرًا إيجابيًا على المشروع سيقضي المستخدمون وقتًا أقل في القلق بشأن كيفية إدارة المهام والمزيد من الوقت التركيز على المهام نفسها",
+    "description_EN": "this app is established to provide a suitable environment to give project managers the ability to manage, monitor, and track time for short-term or long-term goals which can cause a positive impact on the project Users will spend less time worrying about how to manage tasks and more time focusing on the tasks themselves.",
+    "img": "/urTask.png",
+    "url": "https://play.google.com/store/apps/details?id=com.urtask.msmar",
+    "alt": "urTask"
   },
   {
     "id": 2,
-    "title": "",
-    "description": "",
-    "img": ""
+    "title": "Career Portfolio",
+    "description_AR": "هو نموذج لملفات التوظيف التي تساعد في الحصول على وظائف أو القبول في معاهد التعليم العالي.",
+    "description_EN": "It is a template for Career portfolios that help with a jobs or acceptance into higher education institutes.",
+    "img": "/career_portfolio.png",
+    "url": "https://ahmedazawi.github.io/bio-website/",
+    "alt": "Career Portfolio"
   },
   {
     "id": 3,
-    "title": "",
-    "description": "",
-    "img": ""
+    "title": "Dark Blue Website",
+    "description_AR": "موقع شركة دارك بلو وهي شركة دعاية و اعلان تتخصص بترويج منتجاتك و ضمان وصولها للمهتمين و الباحثين",
+    "description_EN": "Dark Blue Company website, which is an advertising company that specializes in promoting your products and ensuring that they reach those interested and researchers",
+    "img": "/dark_blue.png",
+    "url": "https://darkblue-iq.com/Home",
+    "alt": "Dark Blue Website"
   },
   {
     "id": 4,
-    "title": "",
-    "description": "",
-    "img": ""
+    "title": "Al-abed Website",
+    "description_AR": "العابد للصيرفة شركة متخصصة فى مجال التحويلات المالية وخدمات الصرافة بدولة العراق. تأسست الشركة في عام 2012 وتخضع لإشراف البنك المركزي العراقي",
+    "description_EN": "Al-Abed Exchange is a company specialized in the field of money transfers and exchange services in Iraq. The company was established in 2012 and is subject to the supervision of the Central Bank of Iraq",
+    "img": "/Al-abed.png",
+    "url": "http://alabedexchange.iq",
+    "alt": "Al-abed Website"
   }
 ]
