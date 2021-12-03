@@ -40,6 +40,7 @@ export default function Home() {
           )}
         </div>
       </div>
+
       <div className={styles.main_text}>
         <div className={styles.about_us} id="about">
           {lang.lang === "EN" ? <h1>About Us</h1> : <h1>من نحن</h1>}
@@ -128,8 +129,12 @@ export default function Home() {
           </div>
         </div>
         <hr style={{ width: "100%", marginTop: "4em" }} />
-        {lang.lang === "EN" ? <h1>Contact Us</h1> : <h1>تواصل معنا</h1>}
-        <div className={styles.contact_us} ref={observe} id="contact">
+        {lang.lang === "EN" ? (
+          <h1 id="contact">Contact Us</h1>
+        ) : (
+          <h1 id="contact">تواصل معنا</h1>
+        )}
+        <div className={styles.contact_us} ref={observe}>
           {lang.lang === "EN" ? (
             <div className={styles.contact_us_components}>
               <div>
@@ -161,9 +166,9 @@ export default function Home() {
                   />
                   <a
                     style={{ marginLeft: "10px" }}
-                    href="mailto:msmar@gmail.com"
+                    href="mailto:msmargroup@outlook.com"
                   >
-                    msmar@gmail.com
+                    msmargroup@outlook.com
                   </a>
                 </small>
                 <br />
@@ -206,9 +211,9 @@ export default function Home() {
                   />
                   <a
                     style={{ marginRight: "10px" }}
-                    href="mailto:msmar@gmail.com"
+                    href="mailto:msmargroup@outlook.com"
                   >
-                    msmar@gmail.com
+                    msmargroup@outlook.com
                   </a>
                 </small>
 

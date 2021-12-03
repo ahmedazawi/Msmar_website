@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Link from "next/link";
 import styles from "../styles/footer.module.css";
 import MsmarIcon from "../src/assets/3";
 import ContextApi from "../context/modescontext";
@@ -21,13 +22,14 @@ const Footer = () => {
         <div className={styles.section_one_links}>
           <a href="/#about"> {lang.lang === "EN" ? "About Us" : "من نحن"}</a>
           <a href="/#projects">
-            {" "}
             {lang.lang === "EN" ? "Our Projects" : "مشاريعنا"}
           </a>
           <a href="/#contact">
             {lang.lang === "EN" ? "Contact Us" : "تواصل معنا"}
           </a>
-          <a href="/services"> {lang.lang === "EN" ? "Services" : "ألخدمات"}</a>
+          <Link href="/services">
+            {lang.lang === "EN" ? "Services" : "ألخدمات"}
+          </Link>
         </div>
       </div>
       <div className={styles.section_two}>
@@ -47,7 +49,7 @@ const Footer = () => {
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="/">
             <MsmarIcon style={{ fill: "white", width: "50px" }} />
           </a>
         </div>
