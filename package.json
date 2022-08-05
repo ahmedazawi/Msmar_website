@@ -1,6 +1,7 @@
 {
   "name": "msmar-website",
   "private": true,
+  "homepage": "https://ahmedazawi.github.io"
   "scripts": {
     "dev": "next dev",
     "build": "next build",
