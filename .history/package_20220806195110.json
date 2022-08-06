@@ -2,12 +2,15 @@
   "name": "msmar-website",
   "private": true,
   "export": "next export",
+  "homepage": "https://ahmedazawi.github.io"
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "svg": "svgr -d src/assets src/assets/svg"
+    "svg": "svgr -d src/assets src/assets/svg",
+  "predeploy": "next build",
+"deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
